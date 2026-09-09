@@ -94,6 +94,26 @@ func (a *AI) Chat(ctx context.Context, body map[string]any) (map[string]any, err
 	return a.c.partner(ctx, http.MethodPost, "/ai/chat", body)
 }
 
+func (a *AI) Quiz(ctx context.Context, body map[string]any) (map[string]any, error) {
+	return a.c.partner(ctx, http.MethodPost, "/ai/quiz", body)
+}
+
+func (a *AI) Material(ctx context.Context, body map[string]any) (map[string]any, error) {
+	return a.c.partner(ctx, http.MethodPost, "/ai/material", body)
+}
+
+func (a *AI) Assignment(ctx context.Context, body map[string]any) (map[string]any, error) {
+	return a.c.partner(ctx, http.MethodPost, "/ai/assignment", body)
+}
+
+func (a *AI) Documents(ctx context.Context, body map[string]any) (map[string]any, error) {
+	return a.c.partner(ctx, http.MethodPost, "/ai/documents", body)
+}
+
+func (a *AI) CurriculumFromPDF(ctx context.Context, body map[string]any) (map[string]any, error) {
+	return a.c.partner(ctx, http.MethodPost, "/ai/curriculum-from-pdf", body)
+}
+
 func (a *AI) Usage(ctx context.Context) (map[string]any, error) {
 	return a.c.partner(ctx, http.MethodGet, "/ai/usage", nil)
 }
